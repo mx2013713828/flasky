@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+</head>
+<body>
+<h1>Hello,{{ name|capitalize}}!</h1>
+<p>a value from a dic {{ mydic['key']}}</p>
+
+{% macro render_comment(comment) %}
+    <li>{{ comment }}</li>
+{% endmacro %}
+
+<ul>
+    {% for comment in comments %}
+        {{ render_comment(comment) }}
+
+    {% endfor %}
+
+</ul>
+
+
+</body>
+</html>
